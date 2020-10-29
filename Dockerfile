@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM nginx:alpine
 
 WORKDIR /webgl
 COPY webgl/ .
