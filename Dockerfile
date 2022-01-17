@@ -1,8 +1,7 @@
 FROM nginx:alpine
 
+WORKDIR /etc/nginx/conf.d
+COPY webgl.conf default.conf
+
 WORKDIR /webgl
 COPY webgl/ .
-
-WORKDIR /etc/nginx/conf.d
-RUN rm default.conf
-COPY webgl.conf webgl.conf
